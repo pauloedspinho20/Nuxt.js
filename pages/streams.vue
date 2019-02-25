@@ -1,13 +1,11 @@
 <template>
-    
+  <h1>Steams</h1>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss">
- @import "./assets/scss/pages/_streams.scss";
+@import "./assets/scss/pages/_streams.scss";
 </style>
