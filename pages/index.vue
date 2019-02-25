@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container bg-primary">
     <div>
       <logo />
       <h1 class="title">
@@ -32,6 +32,7 @@ export default {
     Logo
   }
 }
+
 </script>
 
 <style>
