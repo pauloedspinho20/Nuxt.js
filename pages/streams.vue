@@ -1,9 +1,18 @@
 <template>
-  <h1>Steams</h1>
+  <div>
+    <h1>Steams</h1>
+    <TwitchStreams />
+  </div>
 </template>
 
 <script>
-export default {}
+import TwitchStreams from "../components/api/TwitchStreams.vue"
+
+export default {
+  components: {
+    TwitchStreams
+  }
+}
 </script>
 
 <style lang="scss">

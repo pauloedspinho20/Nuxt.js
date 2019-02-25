@@ -20,6 +20,7 @@ module.exports =  {
     ],
     // add your custom rules here
     rules: {
+      "no-unused-vars" : "off",
       "semi": [2, "never"],
       "no-console": "off",
       "vue/max-attributes-per-line": "off",

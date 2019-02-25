@@ -1,39 +1,27 @@
-const pkg = require('./package')
-
+const pkg = require("./package")
 
 module.exports = {
-  mode: 'spa',
+  mode: "spa",
 
   /*
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
-    meta: [{
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: pkg.description
-      }
-    ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    titleTemplate: "%s - Nuxt.js",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      { hid: "description", name: "description", content: "Meta description" }
+    ]
   },
 
   /*
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#fff'
+    color: "#fff"
   },
 
   /*
@@ -49,10 +37,14 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['bootstrap-vue/nuxt'],
+  modules: ["bootstrap-vue/nuxt", "@nuxtjs/axios"],
   bootstrapVue: {
     bootstrapCSS: false, // or `css`
     bootstrapVueCSS: false // or `bvCSS`
+  },
+
+  axios: {
+    // proxyHeaders: false
   },
 
   /*
@@ -70,9 +62,9 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
           exclude: /(node_modules)/,
-          options : {
-            fix : true
-        }
+          options: {
+            fix: true
+          }
         })
       }
     }

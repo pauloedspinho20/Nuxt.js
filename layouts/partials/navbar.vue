@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="/">
+      <b-navbar-brand to="/">
         Blip
       </b-navbar-brand>
 
@@ -9,10 +9,10 @@
 
       <b-collapse id="nav_collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="/search">
+          <b-nav-item to="search">
             Search
           </b-nav-item>
-          <b-nav-item href="/streams">
+          <b-nav-item to="streams">
             Streams
           </b-nav-item>
         </b-navbar-nav>
