@@ -21,7 +21,9 @@ module.exports = {
    ** Customize the progress-bar color
    */
   loading: {
-    color: "#fff"
+    color: "#4FC08D",
+    failedColor: "#bf5050",
+    duration: 300
   },
 
   /*
@@ -45,6 +47,7 @@ module.exports = {
 
   axios: {
     // proxyHeaders: false
+    debug: true
   },
 
   /*
