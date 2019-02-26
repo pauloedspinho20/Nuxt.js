@@ -21,9 +21,10 @@ module.exports = {
    ** Customize the progress-bar color
    */
   loading: {
-    color: "#4FC08D",
+    color: "#13ea4e",
     failedColor: "#bf5050",
-    duration: 300
+    duration: 100,
+    height: "5px"
   },
 
   /*
@@ -39,10 +40,14 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ["bootstrap-vue/nuxt", "@nuxtjs/axios"],
+  modules: ["bootstrap-vue/nuxt", "@nuxtjs/axios", "@nuxtjs/auth"],
   bootstrapVue: {
     bootstrapCSS: false, // or `css`
     bootstrapVueCSS: false // or `bvCSS`
+  },
+
+  auth: {
+    // Options
   },
 
   axios: {
