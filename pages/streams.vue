@@ -3,8 +3,21 @@
     <h1 class="text-center">
       Streams
     </h1>
+    <div id="search">
+      <input
+        v-model="search"
+        type="search"
+        placeholder="Search"
+        class="form-control"
+      />
+      <!--  <ul>
+        <li v-for="stream in filteredStreams" :key="stream.id">
+          {{ stream.title }}
+        </li>
+      </ul> -->
+    </div>
 
-    <TwitchStreams :streams="streams" />
+    <TwitchStreams :streams="filteredStreams" />
   </div>
 </template>
 
@@ -16,12 +29,26 @@ export default {
   components: {
     TwitchStreams
   },
+  data: function() {
+    return {
+      search: ""
+    }
+  },
+  computed: {
+    filteredStreams: function() {
+      return this.streams.filter(stream => {
+        return stream.title.toLowerCase().includes(this.search.toLowerCase())
+      })
+    }
+  },
   asyncData({ error }) {
     return axios
       .get("https://api.twitch.tv/helix/streams")
 
       .then(res => {
-        return { streams: res.data.data }
+        return {
+          streams: res.data.data
+        }
       })
       .catch(e => {
         error({ statusCode: 404, message: "Post not found" })
