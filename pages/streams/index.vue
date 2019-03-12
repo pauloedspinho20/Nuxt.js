@@ -27,7 +27,7 @@
 
 <script>
 import axios from "axios"
-import TwitchStreams from "../components/api/TwitchStreams.vue"
+import TwitchStreams from "@/components/api/TwitchStreams.vue"
 axios.defaults.headers.common["Client-ID"] = "4lb0nos4w98bwq6behhi3rjg32m2w9"
 export default {
   components: {
