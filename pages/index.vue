@@ -2,7 +2,7 @@
   <section class="container h-100 d-flex flex-column">
     <div class="row">
       <div class="col-12 d-flex justify-content-center">
-        <img class="my-5" src="@/assets/img/blip-logo.svg" alt="Blip logo" >
+        <img class="my-5" src="@/assets/img/blip-logo.svg" alt="Blip logo" />
       </div>
       <div class="col-12 text-center">
         <h4 class=" my-3">
