@@ -1,0 +1,21 @@
+// typography.scss
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

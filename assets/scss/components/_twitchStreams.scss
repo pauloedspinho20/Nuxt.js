@@ -1,0 +1,10 @@
+// twitchStreams.scss
+
+.twitch-streams {
+    .stream {
+        @include transition();
+        &:hover {
+            @include default-box-shadow();
+        }
+    }
+}
