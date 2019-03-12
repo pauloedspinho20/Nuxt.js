@@ -1,5 +1,5 @@
 <template>
-  <section class="container bg-primary">
+  <section class="container bg-primary h-100 d-flex flex-column">
     <div class="row">
       <div class="col-12">
         <logo />
@@ -29,5 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/scss/pages/_index.scss";
+/* @import "./assets/scss/pages/_index.scss"; */
 </style>

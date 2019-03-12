@@ -1,0 +1,23 @@
+// main.scss
+
+// PARTIALS
+
+@import "./partials/_variables.scss";
+@import "./partials/_mixins.scss";
+@import "./partials/_typography.scss";
+
+// LAYOUTS
+
+@import "./layouts/_default.scss";
+@import "./layouts/_navbar.scss";
+@import "./layouts/_footer.scss";
+
+// PAGES
+
+@import "./pages/_index.scss";
+@import "./pages/_about.scss";
+@import "./pages/_streams.scss";
+
+// COMPONENTS
+
+@import "./components/_sociallinks.scss";

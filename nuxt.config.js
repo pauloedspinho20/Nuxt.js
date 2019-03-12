@@ -14,7 +14,8 @@ module.exports = {
 
       // hid is used as unique identifier. Do not use `vmid` for it as it will not work
       { hid: "description", name: "description", content: "Meta description" }
-    ]
+    ],
+    script: [{ src: "https://use.fontawesome.com/bcef0e49bd.js" }]
   },
 
   /*
@@ -63,6 +64,21 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
+      const vueLoader = config.module.rules.find((rule) => rule.loader === "vue-loader")
+      vueLoader.options.transformAssetUrls = {
+        video: ["src", "poster"],
+        source: "src",
+        img: "src",
+        image: "xlink:href",
+        "b-img": "src",
+        "b-img-lazy": ["src", "blank-src"],
+        "b-card": "img-src",
+        "b-card-img": "img-src",
+        "b-card-img-lazy": ["src", "blank-src"],
+        "b-carousel-slide": "img-src",
+        "b-embed": "src"
+      }
+
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

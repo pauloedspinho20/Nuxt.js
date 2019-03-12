@@ -1,0 +1,21 @@
+// socialLinks.scss
+
+.social-links {
+  .link {
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: $primary;
+    border: none;
+    border-radius: 50px;
+    color: $dark;
+    font-size: 1.2rem;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    @include transition();
+    &:hover {
+        @include transform(scale(1.1));
+    }
+  }
+}

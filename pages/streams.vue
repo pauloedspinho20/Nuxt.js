@@ -1,24 +1,28 @@
 <template>
-  <div>
-    <h1 class="text-center">
-      Streams
-    </h1>
-    <div id="search">
+  <section class="container">
+    <div class="col-12 text-center">
+      <h1 clas="py-3">
+        {{ title }}
+      </h1>
+    </div>
+    <div class="col-12  my-5">
       <input
+        id="search"
         v-model="search"
-        type="search"
-        placeholder="Search"
         class="form-control"
+        type="search"
+        placeholder="Search streams"
+        aria-describedby="inputGroup-sizing-lg"
       />
-      <!--  <ul>
-        <li v-for="stream in filteredStreams" :key="stream.id">
-          {{ stream.title }}
-        </li>
-      </ul> -->
+    </div>
+    <div class="col-12 col-sm-6">
+      <p class="text-left">Number of results: {{ filteredStreams.length }}</p>
     </div>
 
-    <TwitchStreams :streams="filteredStreams" />
-  </div>
+    <div class="col-12">
+      <TwitchStreams :streams="filteredStreams" :search="search" />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -31,7 +35,8 @@ export default {
   },
   data: function() {
     return {
-      search: ""
+      search: "",
+      title: "Search Streams"
     }
   },
   computed: {
@@ -58,5 +63,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/scss/pages/_streams.scss";
+/* @import "./assets/scss/pages/_streams.scss"; */
 </style>

@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="wrapper bg-light">
     <Navbar />
-    <nuxt />
+    <main>
+      <nuxt />
+    </main>
     <Footer />
   </div>
 </template>
@@ -21,4 +23,5 @@ export default {
 <style lang="scss">
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-vue/src/index.scss";
+@import "../assets/scss/_main.scss";
 </style>
